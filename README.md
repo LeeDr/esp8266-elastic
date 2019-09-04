@@ -20,4 +20,10 @@ Remove the jumper from ground to D1 and press the rst (reset) button on the esp8
 
 Now your in "normal mode".  The esp8266 will use the saved WiFi credentials to connect.  Now it can use NTP to get the current time so that it can write timestamps with the data to Elasticsearch.
 
+At one earlier point in this development I had it setup so that when writing temperatures to Elasticsearch you could also open a webpage hosted by the device and get the temperatures locally.  This isn't working right now but I'd like to fix that.  In fact, it would be good to have this function even when it's in AP mode.  You might be out camping away from any WiFi and want to monitor the grill temp.
+
+TODO: Add a field (maybe "name" or "user") to the setup form so that multiple people could write to the same cluster and be able to know which data is theirs.
+TODO: Add fields to the setup form so that you could name the temperature readings to something meaningfull like "inside" and "outside" instead of the currently hard-coded "temp0" and "temp1".
+TODO: Support other sensors?  Or only have one built-in temp/pressure/humidity sensor to keep it compact and simple?
+
 Add pictures and screenshots of Kibana data here.
